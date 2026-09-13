@@ -406,6 +406,7 @@ window.DMAE_logout=function(){var done=function(){try{localStorage.removeItem("d
     <a href="#caderno">Caderno de erros</a>
     <a href="#flashcards">Flashcards</a>
     <a href="#vespera">Revisão de véspera</a>
+    <a href="#discursiva">Redação / Discursiva</a>
     <div class="grp">4 · Consultar</div>
     <a href="#ficha">Ficha do edital</a>
     <a href="#portugues">O que estudar (verticalizado)</a>
@@ -948,6 +949,56 @@ window.DMAE_logout=function(){var done=function(){try{localStorage.removeItem("d
         </tbody>
       </table></div>
       <div class="alert red"><span class="tag">Regra de ouro no dia</span> — não deixe nada em branco; comece pelo que domina; reserve tempo para a discursiva.</div>
+    </div></section>
+
+
+    <!-- ============ DISCURSIVA ============ -->
+    <section id="discursiva"><div class="card">
+      <p class="eyebrow">Fase da carreira Analista · muita gente forte na objetiva perde aqui</p>
+      <h2 class="sec">Prova Discursiva (técnica) — como mandar bem</h2>
+      <p>A carreira de Analista tem <strong>prova discursiva</strong>: você responde, por escrito, a um tema <strong>técnico</strong> de TI. O avaliador olha <strong>correção técnica</strong>, <strong>clareza</strong> e <strong>estrutura</strong> — não é redação literária, é demonstrar que você domina o assunto.</p>
+
+      <h3>A estrutura de uma boa resposta técnica</h3>
+      <div class="tw"><table>
+        <thead><tr><th>Parte</th><th>O que escrever</th></tr></thead>
+        <tbody>
+        <tr><td class="k">Definição</td><td>Comece definindo o conceito com precisão (1–2 frases). Ex.: “Microserviços são um estilo de arquitetura em que a aplicação é dividida em serviços pequenos, independentes e implantáveis separadamente”.</td></tr>
+        <tr><td class="k">Explicação</td><td>Detalhe como funciona, componentes e o problema que resolve. Use os termos técnicos corretos.</td></tr>
+        <tr><td class="k">Exemplo / aplicação</td><td>Dê um exemplo prático ou cite tecnologias (Spring, Docker, Kubernetes, REST, Kafka).</td></tr>
+        <tr><td class="k">Trade-offs</td><td>Feche com prós e contras / quando usar (mostra maturidade: nada é “bala de prata”).</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>O que faz ganhar (e perder) pontos</h3>
+      <ul>
+        <li><strong>Ganha:</strong> vocabulário técnico correto, comparações (REST × SOAP, monolito × microserviços, SQL × NoSQL), citar padrões (SOLID, design patterns) e boas práticas (testes, CI/CD, segurança).</li>
+        <li><strong>Perde:</strong> erro conceitual (ex.: confundir autenticação com autorização), resposta vaga/genérica, fugir do que foi perguntado, texto desorganizado.</li>
+        <li>Responda <strong>exatamente</strong> o que o comando pede; se pede “vantagens e desvantagens”, traga os dois.</li>
+      </ul>
+
+      <h3>Temas prováveis</h3>
+      <ul>
+        <li>Arquitetura de microserviços × monolito (vantagens, desvantagens, quando usar).</li>
+        <li>APIs REST: características, verbos HTTP, boas práticas; REST × SOAP.</li>
+        <li>Segurança: autenticação × autorização, OAuth2, criptografia, dev seguro.</li>
+        <li>Metodologias ágeis (Scrum) e práticas DevOps (CI/CD, containers).</li>
+        <li>Banco de dados: relacional × NoSQL; modelagem e normalização.</li>
+        <li>Qualidade e testes (TDD, tipos de teste); princípios SOLID.</li>
+        <li>Computação em nuvem (SaaS/PaaS/IaaS) e escalabilidade.</li>
+      </ul>
+
+      <div class="alert blue"><span class="tag">Treine de verdade</span> — responda <b>1 tema técnico por semana</b> por escrito e depois <b>corrija com o tutor de IA</b>: cole no Claude.ai/ChatGPT/Gemini o texto abaixo + a sua resposta.</div>
+      <pre id="disc-prompt" style="white-space:pre-wrap;word-break:break-word;background:var(--line-2);padding:12px 14px;border-radius:10px;font-size:13px;line-height:1.5;max-height:260px;overflow:auto;margin:10px 0">Aja como examinador do concurso dos Correios (Analista - Desenvolvimento de Sistemas, banca IBFC) corrigindo minha resposta a uma questão discursiva técnica de TI. Vou colar a questão e a minha resposta. Corrija com rigor: (1) aponte erros ou imprecisões técnicas e explique o correto; (2) diga se respondi exatamente ao comando; (3) avalie clareza, estrutura (definição → explicação → exemplo → trade-offs) e uso dos termos técnicos; (4) dê uma nota de 0 a 10 e as 3 prioridades para melhorar; (5) reescreva um trecho de forma exemplar. Aqui está a questão e a minha resposta:</pre>
+      <button class="btn" type="button" onclick="try{var t=document.getElementById('disc-prompt').innerText;if(navigator.clipboard){navigator.clipboard.writeText(t);}else{var r=document.createRange();r.selectNode(document.getElementById('disc-prompt'));window.getSelection().removeAllRanges();window.getSelection().addRange(r);document.execCommand('copy');}this.textContent='✓ Copiado! Cole no chat da IA + sua resposta';}catch(e){this.textContent='Selecione o texto acima e copie';}">Copiar o prompt de correção</button>
+
+      <h3 style="margin-top:20px">Checklist antes de entregar</h3>
+      <ul>
+        <li>☑ Defini o conceito com precisão no início?</li>
+        <li>☑ Usei os termos técnicos corretos?</li>
+        <li>☑ Dei exemplo/tecnologia e trade-offs?</li>
+        <li>☑ Respondi exatamente ao comando?</li>
+        <li>☑ Texto organizado e sem erro conceitual?</li>
+      </ul>
     </div></section>
 
     <!-- ============ 10. FONTES ============ -->
